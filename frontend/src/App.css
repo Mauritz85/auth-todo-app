@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+div{
+  border-radius: 1rem;
+  border: 1px solid grey;
+}
+
+.nav-bar{
+  background-color: orange;
+  height: 7rem;
+
+}
+
+input{
+  margin:1rem;
+}
+
+
+
+
+
+
