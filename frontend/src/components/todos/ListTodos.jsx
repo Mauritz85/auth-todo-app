@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { deleteTodo, getTodos } from "../../store/features/todosSlice";
+import { deleteTodo } from "../../store/features/todosSlice";
+import { getTodos } from "../../store/actions/todoActions";
 
 const ListTodos = ({ setTodo }) => {
   const dispatch = useDispatch();

@@ -57,22 +57,6 @@ export const loadUser = () => {
     }
 }
 
-export const addTodo = (todo) => {
-    return (dispatch, getState) => {
-        axios
-            .post(baseURL + 'todos', todo)
-            .then((response) => {
-                const newTodo = response.data;
-                dispatch({
-                    type: 'ADD_TODO',
-                    todo: newTodo,
-                });
-            })
-            .catch((error) => {
-                console.log(error.response);
-            });
-    };
-}
 
 export const signOut = () => {
     return (dispatch) => {

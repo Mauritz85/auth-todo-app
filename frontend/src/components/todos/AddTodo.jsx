@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 //import { addTodo } from "../../store/actions/todoActions";
-import  { getTodos} from '../../store/features/todosSlice'
-import { addTodo } from "../../store/actions/authActions";
+//import  { getTodos} from '../../store/features/todosSlice'
+import { addTodo, getTodos } from "../../store/actions/todoActions";
 
 
 const AddTodo = () => {

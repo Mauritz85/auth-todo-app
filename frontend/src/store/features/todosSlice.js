@@ -2,8 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { baseURL } from "../../api";
 import { toast } from 'react-toastify'
-import { addTodo } from "../actions/authActions";
-
+import { addTodo } from "../actions/todoActions";
+import { setHeaders } from "../../api";
 
 
 
@@ -20,22 +20,20 @@ const initialState = {
 };
 
 
-
-
-
-
 export const getTodos = createAsyncThunk(
-    "todos/getTodos",
+    'todos/getTodos',
     async (id = null, { rejectWithValue }) => {
-        try {
-            const response = await axios.get(baseURL + "todos");
-            return response.data;
-        } catch (error) {
-            console.log(error);
-            return rejectWithValue(error.response?.data);
-        }
+      try {
+        const response = await axios.get(`${baseURL}todos`, setHeaders());
+        return response.data;
+      } catch (error) {
+        console.log(error);
+        return rejectWithValue(error.response?.data);
+      }
     }
-);
+  );
+
+
 
 export const deleteTodo = createAsyncThunk(
     "todos/deleteTodo",
